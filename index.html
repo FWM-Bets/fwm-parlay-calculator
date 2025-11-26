@@ -601,14 +601,19 @@
       </div>
 
       <div class="summary-row">
-        <div class="summary-main">
-          Profit:
-          <span class="value" id="parlay-profit-display">$0.00</span>
-        </div>
-        <div class="summary-badge warn" id="stake-risk-status">
-          Enter bankroll & stake for risk checks
-        </div>
-      </div>
+  <div class="summary-main">
+    Profit:
+    <span class="value" id="parlay-profit-display">$0.00</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div class="summary-badge warn" id="stake-risk-status">
+      Enter bankroll & stake for risk checks
+    </div>
+    <button type="button" id="reset-btn" class="secondary">
+      Reset
+    </button>
+  </div>
+</div>
 
       <!-- Tiered suggestions -->
       <div class="tiers-grid">
@@ -982,6 +987,23 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     ensureAtLeastOneLeg();
     recalcAll();
+    function resetParlay() {
+  bankrollInput.value = "";
+  stakeInput.value = "";
+  parlayOddsDisplay.textContent = "N/A";
+  parlayReturnDisplay.textContent = "$0.00";
+  parlayProfitDisplay.textContent = "$0.00";
+
+  stakeRiskStatusEl.textContent = "Enter bankroll & stake for risk checks";
+  stakeRiskStatusEl.className = "summary-badge warn";
+
+  legsContainer.innerHTML = "";
+  ensureAtLeastOneLeg();
+
+  recalcAll();
+}
+
+document.getElementById("reset-btn").addEventListener("click", resetParlay);
   </script>
 </body>
 </html>

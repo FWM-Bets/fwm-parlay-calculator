@@ -65,7 +65,6 @@
       }
     }
 
-    /* HEADER */
     .header {
       display: flex;
       justify-content: space-between;
@@ -93,24 +92,6 @@
       color: var(--text-main);
     }
 
-    .cta-chip span.icon {
-      font-size: 14px;
-    }
-
-    .title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-top: 10px;
-    }
-
-    .brand {
-      font-size: 14px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
     h1 {
       font-size: 22px;
       font-weight: 650;
@@ -121,13 +102,13 @@
 
     .badge-live {
       font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
       padding: 2px 8px;
       border-radius: 999px;
       border: 1px solid rgba(0, 255, 133, 0.4);
       background: rgba(0, 255, 133, 0.05);
       color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
     }
 
     .subtitle {
@@ -135,21 +116,12 @@
       color: var(--text-muted);
     }
 
-    /* SECTIONS */
     .section {
       background: var(--bg-card);
       border-radius: 18px;
       border: 1px solid var(--border-subtle);
-      padding: 16px 16px 14px;
+      padding: 18px;
       margin-bottom: 14px;
-    }
-
-    @media (min-width: 768px) {
-      .section {
-        border-radius: 20px;
-        padding: 18px 18px 16px;
-        margin-bottom: 16px;
-      }
     }
 
     .section-header {
@@ -167,11 +139,6 @@
       color: var(--text-muted);
     }
 
-    .section-caption {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
     label {
       font-size: 13px;
       margin-bottom: 6px;
@@ -179,7 +146,6 @@
       color: var(--text-muted);
     }
 
-    /* INPUTS */
     .input-row {
       display: flex;
       align-items: center;
@@ -195,8 +161,7 @@
       border: 1px solid rgba(0, 255, 133, 0.35);
     }
 
-    input[type="number"],
-    input[type="text"] {
+    input {
       width: 100%;
       border-radius: 10px;
       border: 1px solid var(--border-subtle);
@@ -204,227 +169,8 @@
       padding: 9px 10px;
       color: var(--text-main);
       font-size: 14px;
-      outline: none;
-      -moz-appearance: textfield;
     }
 
-    input[type="number"]::placeholder,
-    input[type="text"]::placeholder {
-      color: #555;
-    }
-
-    input[type="number"]:focus,
-    input[type="text"]:focus {
-      border-color: rgba(0, 255, 133, 0.7);
-      box-shadow: 0 0 0 1px rgba(0, 255, 133, 0.25);
-    }
-
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-
-    /* LEG CARDS */
-    .legs-container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .leg-card {
-      border-radius: 14px;
-      border: 1px solid var(--border-subtle);
-      background: linear-gradient(145deg, #050505, #101010);
-      padding: 10px 11px 9px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .leg-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(0, 255, 133, 0.14), transparent 55%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .leg-card-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .leg-header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-      margin-bottom: 2px;
-    }
-
-    .leg-index {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .remove-leg {
-      font-size: 11px;
-      border-radius: 999px;
-      border: 1px solid var(--border-subtle);
-      padding: 2px 7px;
-      cursor: pointer;
-      background: rgba(0,0,0,0.6);
-      color: var(--text-muted);
-    }
-
-    .remove-leg:hover {
-      border-color: rgba(255,77,79,0.7);
-      color: var(--danger);
-    }
-
-    .leg-label-input {
-      font-size: 13px;
-    }
-
-    .leg-odds-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .leg-odds-input {
-      flex: 1;
-      min-width: 120px;
-    }
-
-    .leg-odds-hint {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .leg-odds-converted {
-      font-size: 12px;
-      color: var(--accent);
-    }
-
-    /* SUMMARY / BADGES */
-    .summary-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: baseline;
-      justify-content: space-between;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .summary-main span.value {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .summary-badge {
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      border: 1px solid transparent;
-    }
-
-    .summary-badge.safe {
-      color: var(--accent);
-      border-color: rgba(0, 255, 133, 0.5);
-      background: rgba(0, 255, 133, 0.06);
-    }
-
-    .summary-badge.warn {
-      color: var(--warning);
-      border-color: rgba(255, 197, 61, 0.6);
-      background: rgba(255, 197, 61, 0.08);
-    }
-
-    .summary-badge.danger {
-      color: var(--danger);
-      border-color: rgba(255, 77, 79, 0.6);
-      background: rgba(255, 77, 79, 0.08);
-    }
-
-    /* TIER SUGGESTIONS */
-    .tiers-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    @media (min-width: 640px) {
-      .tiers-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    .tier-card {
-      border-radius: 12px;
-      border: 1px solid var(--border-subtle);
-      background: #050505;
-      padding: 8px 9px 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .tier-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-    }
-
-    .tier-name {
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .tier-amount {
-      font-size: 18px;
-      font-weight: 650;
-      color: var(--accent);
-    }
-
-    .tier-note {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    .tier-use-btn {
-      margin-top: 2px;
-      align-self: flex-start;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: rgba(0, 255, 133, 0.06);
-      color: var(--accent);
-      font-size: 11px;
-      padding: 4px 8px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .tier-use-btn:hover {
-      background: rgba(0, 255, 133, 0.14);
-    }
-
-    /* BUTTONS / FOOTER */
     .btn-row {
       display: flex;
       gap: 8px;
@@ -439,571 +185,169 @@
       font-size: 12px;
       padding: 7px 11px;
       cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.15s ease-out;
     }
 
     button:hover {
       background: rgba(0, 255, 133, 0.16);
-      transform: translateY(-0.5px);
       box-shadow: 0 0 0 1px rgba(0, 255, 133, 0.25);
     }
 
-    button.secondary {
-      border-color: var(--border-subtle);
-      background: #050505;
-      color: var(--text-main);
-    }
-
-    .footer {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    /* NOTES */
-    .notes {
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    .notes-title {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 6px;
-      color: var(--text-muted);
-    }
-
-    .notes ul {
-      list-style: none;
-      margin: 0 0 6px 0;
-      padding: 0;
-    }
-
-    .notes li {
-      margin-bottom: 4px;
-    }
-
-    .notes strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .disclaimer {
-      margin-top: 4px;
-      font-size: 10px;
-      opacity: 0.85;
+    .reset-btn {
+      border: 1px solid rgba(0, 255, 133, 0.5);
+      background: rgba(0, 255, 133, 0.06);
+      color: var(--accent);
     }
   </style>
 </head>
+
 <body>
   <div class="app">
+
     <!-- HEADER -->
     <div class="header">
-      <img class="brand-logo" src="fwm_bets_logo_transparent.png" alt="FWM Bets Logo" />
-
-      <div class="cta-chip" onclick="window.open('https://whop.com/fwm-bets/', '_blank')">
-        <span class="icon">👾</span>
-        <span>Join for FREE Access</span>
-      </div>
+      <img class="brand-logo" src="fwm_bets_logo_transparent.png" />
+      <div class="cta-chip" onclick="window.open('https://whop.com/fwm-bets/', '_blank')">👾 Join for FREE Access</div>
     </div>
 
-    <div class="title-group">
-      <h1>
-        Parlay Calculator
-        <span class="badge-live">v1 • beta</span>
-      </h1>
-      <div class="subtitle">
-        Build parlays, see payout, and size bets with
-        <span style="color: var(--accent);">Light / Regular / Max</span> stakes.
-      </div>
-    </div>
+    <h1>Parlay Calculator <span class="badge-live">v1 • beta</span></h1>
+    <div class="subtitle">Build parlays & size bets with Light / Regular / Max stakes.</div>
 
-    <!-- 1. BANKROLL INPUT -->
+    <!-- 1. BANKROLL -->
     <div class="section">
-      <div class="section-header">
-        <div class="section-title">1. Bankroll Input</div>
-        <div class="section-caption">Used for stake suggestions. Works with any book.</div>
-      </div>
-
-      <label for="bankroll">Active Bankroll</label>
+      <div class="section-header"><div class="section-title">1. Bankroll Input</div></div>
+      <label>Active Bankroll</label>
       <div class="input-row">
         <div class="input-prefix">$</div>
-        <input
-          id="bankroll"
-          type="number"
-          min="0"
-          step="1"
-          placeholder="Enter amount (e.g. 100, 250, 500)"
-        />
+        <input id="bankroll" type="number" min="0" placeholder="Enter bankroll" />
       </div>
     </div>
 
-    <!-- 2. PARLAY LEGS -->
+    <!-- 2. LEGS -->
     <div class="section">
-      <div class="section-header">
-        <div class="section-title">2. Parlay Builder</div>
-        <div class="section-caption">
-          Add your legs. Works with FWM plays or any bets you like.
-        </div>
-      </div>
-
-      <div class="legs-container" id="legs-container">
-        <!-- Leg cards injected here -->
-      </div>
-
-      <div style="margin-top:10px;" class="btn-row">
-        <button type="button" id="add-leg-btn">
-          ➕ Add Leg
-        </button>
+      <div class="section-header"><div class="section-title">2. Parlay Builder</div></div>
+      <div id="legs-container"></div>
+      <div class="btn-row" style="margin-top:10px;">
+        <button id="add-leg-btn">➕ Add Leg</button>
       </div>
     </div>
 
-    <!-- 3. STAKE & RESULTS -->
+    <!-- 3. RESULTS -->
     <div class="section">
-      <div class="section-header">
-        <div class="section-title">3. Stake & Results</div>
-        <div class="section-caption">
-          Enter a stake or tap a suggested tier.
-        </div>
-      </div>
+      <div class="section-header"><div class="section-title">3. Stake & Results</div></div>
 
-      <label for="stake">Parlay Stake (optional)</label>
-      <div class="input-row" style="margin-bottom:10px;">
+      <label>Parlay Stake</label>
+      <div class="input-row">
         <div class="input-prefix">$</div>
-        <input
-          id="stake"
-          type="number"
-          min="0"
-          step="1"
-          placeholder="Enter your wager amount (or use a suggested stake)"
-        />
+        <input id="stake" type="number" min="0" placeholder="Enter stake" />
       </div>
 
-      <div class="summary-row" style="margin-bottom:8px;">
-        <div class="summary-main">
-          Parlay odds:
-          <span class="value" id="parlay-odds-display">N/A</span>
-        </div>
-        <div class="summary-main">
-          Potential return:
-          <span class="value" id="parlay-return-display">$0.00</span>
-        </div>
+      <div class="summary-row" style="margin-top:12px;">
+        <div>Parlay odds: <span id="parlay-odds-display">N/A</span></div>
+        <div>Potential return: <span id="parlay-return-display">$0.00</span></div>
       </div>
 
-      <div class="summary-row">
-  <div class="summary-main">
-    Profit:
-    <span class="value" id="parlay-profit-display">$0.00</span>
-  </div>
-  <div style="display: flex; align-items: center; gap: 8px;">
-    <div class="summary-badge warn" id="stake-risk-status">
-      Enter bankroll & stake for risk checks
-    </div>
-    <button type="button" id="reset-btn" class="secondary">
-      Reset
-    </button>
-  </div>
-</div>
-
-      <!-- Tiered suggestions -->
-      <div class="tiers-grid">
-        <div class="tier-card">
-          <div class="tier-label">Light</div>
-          <div class="tier-name">Light Parlay Stake</div>
-          <div class="tier-amount" id="light-stake">$0.00</div>
-          <div class="tier-note">≈ 2.5% of bankroll – feeler or fun ladder.</div>
-          <button type="button" class="tier-use-btn" data-tier="light">
-            Use Light stake
-          </button>
-        </div>
-        <div class="tier-card">
-          <div class="tier-label">Regular</div>
-          <div class="tier-name">Regular Parlay Stake</div>
-          <div class="tier-amount" id="regular-stake">$0.00</div>
-          <div class="tier-note">≈ 5% of bankroll – standard parlay risk.</div>
-          <button type="button" class="tier-use-btn" data-tier="regular">
-            Use Regular stake
-          </button>
-        </div>
-        <div class="tier-card">
-          <div class="tier-label">Max</div>
-          <div class="tier-name">Max Parlay Stake</div>
-          <div class="tier-amount" id="max-stake">$0.00</div>
-          <div class="tier-note">≈ 10% of bankroll – reserve for your best spots.</div>
-          <button type="button" class="tier-use-btn" data-tier="max">
-            Use Max stake
-          </button>
-        </div>
+      <div class="summary-row" style="margin-top:6px;">
+        <div>Profit: <span id="parlay-profit-display">$0.00</span></div>
+        <button id="reset-btn" class="reset-btn">↺ Reset</button>
       </div>
     </div>
 
-    <!-- NOTES / DISCLAIMER -->
-    <div class="section">
-      <div class="notes">
-        <div class="notes-title">4. Notes & Definitions</div>
-        <ul>
-          <li>
-            <strong>Odds Input</strong> – You can enter
-            <strong>American odds</strong> (e.g. <strong>-120</strong>, <strong>+150</strong>)
-            or <strong>decimal odds</strong> (e.g. <strong>1.83</strong>). Values below ~10
-            are treated as decimal by default.
-          </li>
-          <li>
-            <strong>Light / Regular / Max stakes</strong> –
-            These are suggested parlay bet sizes using ~2.5% / 5% / 10% of your bankroll.
-            Adjust to your risk tolerance.
-          </li>
-          <li>
-            <strong>Risk badge</strong> – Helps you quickly sanity check if your parlay stake
-            is sized reasonably versus your bankroll.
-          </li>
-        </ul>
-        <div class="disclaimer">
-          This tool is for educational & entertainment purposes only. Betting always involves risk.
-          Never wager money you cannot afford to lose. Percentages and suggestions are guidelines —
-          not financial advice.
-        </div>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer">
-      <div>© <span id="year"></span> FWM Bets. All rights reserved.</div>
-      <div class="btn-row">
-        <button type="button" id="copy-link-btn" class="secondary">
-          🔗 Share this calculator
-        </button>
-      </div>
-    </div>
   </div>
 
-  <script>
-    // ====== DOM ELEMENTS ======
-    const bankrollInput = document.getElementById('bankroll');
-    const stakeInput = document.getElementById('stake');
 
-    const parlayOddsDisplay = document.getElementById('parlay-odds-display');
-    const parlayReturnDisplay = document.getElementById('parlay-return-display');
-    const parlayProfitDisplay = document.getElementById('parlay-profit-display');
+<script>
+// DOM
+const bankrollInput = document.getElementById('bankroll');
+const stakeInput = document.getElementById('stake');
+const legsContainer = document.getElementById('legs-container');
+const parlayOddsDisplay = document.getElementById('parlay-odds-display');
+const parlayReturnDisplay = document.getElementById('parlay-return-display');
+const parlayProfitDisplay = document.getElementById('parlay-profit-display');
+const addLegBtn = document.getElementById('add-leg-btn');
 
-    const lightStakeEl = document.getElementById('light-stake');
-    const regularStakeEl = document.getElementById('regular-stake');
-    const maxStakeEl = document.getElementById('max-stake');
+// Odds conversion
+function americanToDecimal(x) {
+  return x > 0 ? 1 + (x / 100) : 1 + (100 / Math.abs(x));
+}
 
-    const stakeRiskStatusEl = document.getElementById('stake-risk-status');
+function parseOdds(val) {
+  if (isNaN(val) || val === 0) return null;
+  let dec = Math.abs(val) < 10 ? val : americanToDecimal(val);
+  let am = Math.abs(val) < 10 ? (dec >= 2 ? (dec-1)*100 : -100/(dec-1)) : val;
+  return { american: Math.round(am), decimal: dec };
+}
 
-    const legsContainer = document.getElementById('legs-container');
-    const addLegBtn = document.getElementById('add-leg-btn');
+// Build a leg card
+function createLegCard(i) {
+  const card = document.createElement('div');
+  card.className = "leg-card";
+  card.innerHTML = `
+    <input type="number" class="leg-odds" placeholder="Odds (-120)"/>
+  `;
+  card.querySelector('.leg-odds').addEventListener('input', recalcAll);
+  return card;
+}
 
-    const copyLinkBtn = document.getElementById('copy-link-btn');
+// Maintain at least one leg
+function ensureLeg() {
+  if (!legsContainer.children.length) legsContainer.appendChild(createLegCard(1));
+}
 
-    // ====== HELPERS ======
-    function parseBankroll() {
-      const val = parseFloat(bankrollInput.value);
-      return isNaN(val) || val < 0 ? 0 : val;
+// Recalculate odds + payout
+function recalcAll() {
+  let amount = parseFloat(stakeInput.value) || 0;
+  let totalDecimal = 1;
+  let validLegs = 0;
+
+  legsContainer.querySelectorAll('.leg-odds').forEach(input=>{
+    const parsed = parseOdds(parseFloat(input.value));
+    if (parsed) {
+      totalDecimal *= parsed.decimal;
+      validLegs++;
     }
+  });
 
-    function parseStake() {
-      const val = parseFloat(stakeInput.value);
-      return isNaN(val) || val < 0 ? 0 : val;
-    }
+  if (!validLegs) {
+    parlayOddsDisplay.textContent = "N/A";
+    parlayReturnDisplay.textContent = "$0.00";
+    parlayProfitDisplay.textContent = "$0.00";
+    return;
+  }
 
-    function fmtCurrency(x) {
-      return '$' + x.toFixed(2);
-    }
+  const american = Math.round((totalDecimal - 1) * 100);
+  parlayOddsDisplay.textContent = (american > 0 ? "+" : "") + american;
 
-    function fmtPercent(x) {
-      return x.toFixed(1) + '%';
-    }
+  if (amount > 0) {
+    const payout = amount * totalDecimal;
+    const profit = payout - amount;
+    parlayReturnDisplay.textContent = "$" + payout.toFixed(2);
+    parlayProfitDisplay.textContent = "$" + profit.toFixed(2);
+  }
+}
 
-    function americanToDecimal(american) {
-      if (american > 0) {
-        return 1 + (american / 100);
-      } else {
-        return 1 + (100 / Math.abs(american));
-      }
-    }
-
-    function decimalToAmerican(decimal) {
-      if (decimal >= 2) {
-        return Math.round((decimal - 1) * 100);
-      } else {
-        return Math.round(-100 / (decimal - 1));
-      }
-    }
-
-    /**
-     * Accept either American or decimal odds:
-     * - If |value| < 10 → treat as decimal
-     * - Else → treat as American
-     */
-    function parseOddsValue(rawVal) {
-      const val = parseFloat(rawVal);
-      if (isNaN(val) || val === 0) {
-        return null;
-      }
-
-      let decimal, american;
-      if (Math.abs(val) < 10) {
-        // decimal input
-        decimal = val;
-        if (decimal <= 1) {
-          return null;
-        }
-        american = decimalToAmerican(decimal);
-      } else {
-        // american input
-        american = val;
-        decimal = americanToDecimal(american);
-      }
-      return { decimal, american };
-    }
-
-    // ====== LEG MANAGEMENT ======
-    function createLegCard(index) {
-      const card = document.createElement('div');
-      card.className = 'leg-card';
-
-      card.innerHTML = `
-        <div class="leg-card-inner">
-          <div class="leg-header-row">
-            <span class="leg-index">Leg ${index}</span>
-            <button type="button" class="remove-leg">Remove</button>
-          </div>
-
-          <input
-            type="text"
-            class="leg-label-input"
-            placeholder="Describe the leg (e.g. Harden 25+ pts, Reaves 3+ 3PTM)"
-          />
-
-          <div class="leg-odds-row">
-            <div class="leg-odds-input">
-              <input
-                type="number"
-                class="leg-odds"
-                placeholder="Odds (e.g. -120 or 1.83)"
-                step="0.01"
-              />
-            </div>
-            <div class="leg-odds-info">
-              <div class="leg-odds-hint">Enter American or decimal odds.</div>
-              <div class="leg-odds-converted">–</div>
-            </div>
-          </div>
-        </div>
-      `;
-
-      // Event: odds change triggers recalculation
-      const oddsInput = card.querySelector('.leg-odds');
-      oddsInput.addEventListener('input', recalcAll);
-
-      // Remove button
-      const removeBtn = card.querySelector('.remove-leg');
-      removeBtn.addEventListener('click', () => {
-        legsContainer.removeChild(card);
-        renumberLegs();
-        recalcAll();
-      });
-
-      return card;
-    }
-
-    function renumberLegs() {
-      const cards = legsContainer.querySelectorAll('.leg-card');
-      cards.forEach((card, idx) => {
-        const idxEl = card.querySelector('.leg-index');
-        if (idxEl) {
-          idxEl.textContent = 'Leg ' + (idx + 1);
-        }
-      });
-    }
-
-    function ensureAtLeastOneLeg() {
-      if (legsContainer.children.length === 0) {
-        const card = createLegCard(1);
-        legsContainer.appendChild(card);
-      }
-    }
-
-    // ====== CORE CALCS ======
-    function updateTierSuggestions() {
-      const bankroll = parseBankroll();
-      const light = bankroll * 0.025; // ~2.5%
-      const regular = bankroll * 0.05; // ~5%
-      const max = bankroll * 0.10; // ~10%
-
-      lightStakeEl.textContent = fmtCurrency(light || 0);
-      regularStakeEl.textContent = fmtCurrency(regular || 0);
-      maxStakeEl.textContent = fmtCurrency(max || 0);
-    }
-
-    function recalcParlayOddsAndPayout() {
-      const cards = legsContainer.querySelectorAll('.leg-card');
-
-      let combinedDecimal = 1.0;
-      let validLegCount = 0;
-
-      cards.forEach(card => {
-        const oddsInput = card.querySelector('.leg-odds');
-        const convertedEl = card.querySelector('.leg-odds-converted');
-        const rawVal = oddsInput.value;
-
-        const parsed = parseOddsValue(rawVal);
-        if (!parsed) {
-          convertedEl.textContent = '–';
-          return;
-        }
-
-        validLegCount += 1;
-        combinedDecimal *= parsed.decimal;
-
-        const americanStr = (parsed.american > 0 ? '+' : '') + parsed.american.toString();
-        const decimalStr = parsed.decimal.toFixed(2);
-        convertedEl.textContent = `${americanStr} (${decimalStr})`;
-      });
-
-      if (validLegCount === 0) {
-        parlayOddsDisplay.textContent = 'N/A';
-        parlayReturnDisplay.textContent = '$0.00';
-        parlayProfitDisplay.textContent = '$0.00';
-        return;
-      }
-
-      // Combined odds
-      const parlayDecimal = combinedDecimal;
-      const parlayAmerican = decimalToAmerican(parlayDecimal);
-
-      const aStr = (parlayAmerican > 0 ? '+' : '') + parlayAmerican.toString();
-      const dStr = parlayDecimal.toFixed(2);
-
-      parlayOddsDisplay.textContent = `${aStr} (${dStr})`;
-
-      // Payout / profit if stake provided
-      const stake = parseStake();
-      if (stake <= 0) {
-        parlayReturnDisplay.textContent = '$0.00';
-        parlayProfitDisplay.textContent = '$0.00';
-        return;
-      }
-
-      const payout = stake * parlayDecimal;
-      const profit = payout - stake;
-
-      parlayReturnDisplay.textContent = fmtCurrency(payout);
-      parlayProfitDisplay.textContent = fmtCurrency(profit);
-    }
-
-    function updateStakeRiskBadge() {
-      const bankroll = parseBankroll();
-      const stake = parseStake();
-
-      stakeRiskStatusEl.classList.remove('safe', 'warn', 'danger');
-
-      if (bankroll <= 0 || stake <= 0) {
-        stakeRiskStatusEl.textContent = 'Enter bankroll & stake for risk checks';
-        stakeRiskStatusEl.classList.add('warn');
-        return;
-      }
-
-      const pct = (stake / bankroll) * 100;
-
-      if (pct <= 5) {
-        stakeRiskStatusEl.textContent = '✅ Within conservative parlay range';
-        stakeRiskStatusEl.classList.add('safe');
-      } else if (pct <= 12) {
-        stakeRiskStatusEl.textContent = '⚠️ Aggressive parlay sizing – double-check your edge';
-        stakeRiskStatusEl.classList.add('warn');
-      } else {
-        stakeRiskStatusEl.textContent = '🚨 Very high exposure on a parlay – tread carefully';
-        stakeRiskStatusEl.classList.add('danger');
-      }
-    }
-
-    function recalcAll() {
-      updateTierSuggestions();
-      recalcParlayOddsAndPayout();
-      updateStakeRiskBadge();
-    }
-
-    // ====== EVENTS ======
-    bankrollInput.addEventListener('input', recalcAll);
-    stakeInput.addEventListener('input', recalcAll);
-
-    addLegBtn.addEventListener('click', () => {
-      const newIndex = legsContainer.children.length + 1;
-      const card = createLegCard(newIndex);
-      legsContainer.appendChild(card);
-      recalcAll();
-    });
-
-    // Tier "Use" buttons
-    document.querySelectorAll('.tier-use-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const bankroll = parseBankroll();
-        if (bankroll <= 0) {
-          alert('Enter your bankroll first so we can size the stake.');
-          return;
-        }
-
-        let stake = 0;
-        const tier = btn.getAttribute('data-tier');
-        if (tier === 'light') {
-          stake = bankroll * 0.025;
-        } else if (tier === 'regular') {
-          stake = bankroll * 0.05;
-        } else if (tier === 'max') {
-          stake = bankroll * 0.10;
-        }
-
-        stakeInput.value = stake.toFixed(2);
-        recalcAll();
-      });
-    });
-
-    copyLinkBtn.addEventListener('click', () => {
-      const url = window.location.href;
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(
-          () => alert('Link copied! Share this parlay calculator with your squad.'),
-          () => alert('Could not copy link. You can still share the page URL manually.')
-        );
-      } else {
-        alert('Copy not supported in this browser. Share the page URL manually.');
-      }
-    });
-
-    // ====== INIT ======
-    document.getElementById('year').textContent = new Date().getFullYear();
-    ensureAtLeastOneLeg();
-    recalcAll();
-    function resetParlay() {
+// Reset button
+function resetParlay() {
   bankrollInput.value = "";
   stakeInput.value = "";
+  legsContainer.innerHTML = "";
+  ensureLeg();
   parlayOddsDisplay.textContent = "N/A";
   parlayReturnDisplay.textContent = "$0.00";
   parlayProfitDisplay.textContent = "$0.00";
-
-  stakeRiskStatusEl.textContent = "Enter bankroll & stake for risk checks";
-  stakeRiskStatusEl.className = "summary-badge warn";
-
-  legsContainer.innerHTML = "";
-  ensureAtLeastOneLeg();
-
-  recalcAll();
 }
 
 document.getElementById("reset-btn").addEventListener("click", resetParlay);
-  </script>
+
+// Events
+bankrollInput.addEventListener('input', recalcAll);
+stakeInput.addEventListener('input', recalcAll);
+addLegBtn.addEventListener("click", () => {
+  legsContainer.appendChild(createLegCard(legsContainer.children.length + 1));
+  recalcAll();
+});
+
+ensureLeg();
+recalcAll();
+</script>
 </body>
 </html>

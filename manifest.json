@@ -1,6 +1,6 @@
 {
   "name": "FWM Bets – Parlay Calculator",
-  "short_name": "Parlay Calc",
+  "short_name": "Parlay Calculator",
   "description": "Build parlays, calculate payouts, and size bets with Light / Regular / Max bankroll tiers. Powered by FWM Bets.",
   "start_url": "./",
   "scope": "./",

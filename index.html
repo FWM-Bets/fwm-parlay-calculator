@@ -622,13 +622,21 @@
         </div>
       </div>
 
-      <div style="display: flex; align-items: center; gap: 8px;">
-  <div class="summary-badge warn" id="stake-risk-status">
-    Enter bankroll & stake for risk checks
+      <div class="summary-row">
+  <div class="summary-main">
+    Profit:
+    <span class="value" id="parlay-profit-display">$0.00</span>
   </div>
-  <button type="button" id="reset-btn" class="reset-btn">
-    Reset
-  </button>
+
+  <!-- RIGHT SIDE FLEX GROUP -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div class="summary-badge warn" id="stake-risk-status">
+      Enter bankroll & stake for risk checks
+    </div>
+    <button type="button" id="reset-btn" class="reset-btn">
+      Reset
+    </button>
+  </div>
 </div>
 
       <!-- Tiered suggestions -->
